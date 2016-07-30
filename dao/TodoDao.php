@@ -63,7 +63,6 @@ final class TodoDao {
      */
     public function find(TodoSearchCriteria $search = null) {
         $result = array();
-        //Testing
         foreach ($this->query($this->getFindSql($search)) as $row) {
             $todo = new Todo();
             TodoMapper::map($todo, $row);
